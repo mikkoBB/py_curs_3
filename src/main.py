@@ -1,13 +1,13 @@
+import os
 import json
 from datetime import datetime
-from src import utils
-from utils import get_sorted_operations
-from utils import print_date
-from utils import get_sent
+from src.utils import get_sorted_operations, get_sent, print_date
+
 
 def main():
     print("Вывести 5 последних выполненных операций, нажать 'Enter'")
     user_input = input()
+
     x = get_sorted_operations()
     for operation in x:
         print(print_date(operation.get('date')), operation.get('description'))
