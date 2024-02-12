@@ -3,6 +3,8 @@ import json
 from datetime import datetime
 from src.utils import get_sorted_operations, get_sent, print_date
 
+DATA_DIR = os.path.join(ROOT_DIR, "data", "operations.json")
+
 
 def main():
     print("Вывести 5 последних выполненных операций, нажать 'Enter'")
