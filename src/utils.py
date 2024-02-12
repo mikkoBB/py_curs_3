@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from datetime import datetime
 
@@ -39,17 +40,19 @@ def encode_account(data):
 def encode_card(data):
     payment_system = ' '.join(data[:-1]) + ' '
     card_name = data[-1]
-    card_number = card_name[0:4] + ' ' + card_name[5:7] + '** ****' + card_name[12:]
+    card_number = card_name[0:4] + ' ' + card_name[4:6] + '** ****' + ' ' + card_name[12:]
     return payment_system + card_number
 
 
 def print_date(source_date):
     try:
-        datatime = datetime.fromisoformat(source_date)
-        return datatime.strftime('%d.%m.%Y')
+        data_time = datetime.fromisoformat(source_date)
+        return data_time.strftime('%d.%m.%Y')
     except ValueError:
         return '<invalid date format>'
-    return datatime
+
+
+
 
 
 
