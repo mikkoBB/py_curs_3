@@ -8,6 +8,9 @@ DATA_DIR = os.path.join(ROOT_DIR, "src", "operations.json")
 
 
 def main():
+    """
+    Программа выводит 5 последних операций в нужном формате
+    """
     print("Вывести 5 последних выполненных операций, нажать 'Enter'")
     user_input = input()
 
