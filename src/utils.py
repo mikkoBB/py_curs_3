@@ -1,13 +1,14 @@
 import json
 import os
 import re
+from config import ROOT_DIR
 from datetime import datetime
 
-DATA_DIR = os.path.join(ROOT_DIR, "data", "operations.json")
+DATA_DIR = os.path.join(ROOT_DIR, "src", "operations.json")
 
 
 def get_operations():
-    with open("operations.json", "r", encoding='utf-8-sig') as f:
+    with open(DATA_DIR, "r", encoding='utf-8-sig') as f:
         operations = json.load(f)
     return operations
 

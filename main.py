@@ -1,9 +1,10 @@
 import os
 import json
+from config import ROOT_DIR
 from datetime import datetime
 from src.utils import get_sorted_operations, get_sent, print_date
 
-DATA_DIR = os.path.join(ROOT_DIR, "data", "operations.json")
+DATA_DIR = os.path.join(ROOT_DIR, "src", "operations.json")
 
 
 def main():
