@@ -3,6 +3,8 @@ import os
 import re
 from datetime import datetime
 
+DATA_DIR = os.path.join(ROOT_DIR, "data", "operations.json")
+
 
 def get_operations():
     with open("operations.json", "r", encoding='utf-8-sig') as f:

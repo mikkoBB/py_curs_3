@@ -1,10 +1,11 @@
 import pytest
 import os.path
 import json
-
-from src import utils
 from src.utils import get_operations, get_sent, get_sorted_operations, print_date
 from datetime import datetime
+
+
+DATA_DIR = os.path.join(ROOT_DIR, "data", "operations.json")
 
 
 def test_get_operations():
